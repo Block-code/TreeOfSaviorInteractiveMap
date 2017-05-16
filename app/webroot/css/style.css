@@ -1,0 +1,12 @@
+body {
+	overflow: hidden;
+}
+
+.locations {
+	position: relative;
+	z-index: 2;
+}
+
+.location {
+	position: absolute;
+}

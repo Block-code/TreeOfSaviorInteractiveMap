@@ -9,6 +9,7 @@
 	<script type="text/javascript" src="js/angular.min.js"></script>
 
 	<link rel="stylesheet" href="css/bootstrap.min.css"> <!-- bootstrap 3.3.7 -->
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<?php echo $this->fetch('content'); ?>
