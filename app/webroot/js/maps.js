@@ -1,6 +1,8 @@
 tosMap.controller('MapsController', [
-	"$scope",
-	function ($scope) {
-		$scope.msg = 'Hello World!';
+	"$scope", "Location",
+	function ($scope, Location) {
+		Location.query().$promise.then(function (response) {
+			$scope.locations = response;
+		});
 	}
 ]);
