@@ -10,3 +10,8 @@ body {
 .location {
 	position: absolute;
 }
+
+.map img {
+	pointer-events: none;
+	-moz-user-select: none;
+}
