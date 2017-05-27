@@ -6,6 +6,7 @@
 		<?php echo $this->fetch('title'); ?>
 	</title>
 	<!-- angular and angular-resource -->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/angular.min.js"></script>
 
 	<link rel="stylesheet" href="css/bootstrap.min.css"> <!-- bootstrap 3.3.7 -->
