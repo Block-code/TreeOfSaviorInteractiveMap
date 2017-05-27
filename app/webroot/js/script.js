@@ -2,5 +2,5 @@
 
 var tosMap = angular.module('tosMap', ['ngResource'])
 	.factory("Location", ["$resource", function ($resource) {
-		return $resource("/locations/:action.json");
+		return $resource("/api/locations/:action.json");
 	}]);
