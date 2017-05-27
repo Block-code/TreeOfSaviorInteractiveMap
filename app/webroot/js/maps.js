@@ -9,7 +9,9 @@ tosMap.controller('MapsController', [
 		$(document).ready(function(){
 			var wndow, scrolling = false;
 
+			$('body').css('cursor', 'url(\'' + normalCursorImagePath + '\'), auto');
 			$(window).on('mousedown', function(event) {
+				$('body').css('cursor', 'url(\'' + draggingCursorImagePath + '\'), auto');
 				wndow = {x:event.pageX, y: event.pageY};
 				scrolling = true;
 			});
@@ -22,6 +24,7 @@ tosMap.controller('MapsController', [
 			});
 
 			$(window).on('mouseup', function () {
+				$('body').css('cursor', 'url(\'' + normalCursorImagePath + '\'), auto');
 				scrolling = false;
 				wndow = {};
 			});
