@@ -9,7 +9,7 @@ tosMap.controller('MapsController', [
 		$(document).ready(function(){
 			var wndow, scrolling = false;
 
-			$('body').css('cursor', 'url(\'' + normalCursorImagePath + '\'), auto');
+			$('body').css('cursor', 'url(\'' + normalCursorImagePath + '\'), auto'); // @todo move this to css
 			$(window).on('mousedown', function(event) {
 				$('body').css('cursor', 'url(\'' + draggingCursorImagePath + '\'), auto');
 				wndow = {x:event.pageX, y: event.pageY};
