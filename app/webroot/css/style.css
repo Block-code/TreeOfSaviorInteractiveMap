@@ -15,3 +15,10 @@ body {
 	pointer-events: none;
 	-moz-user-select: none;
 }
+
+.search {
+	right: 50px;
+	position: fixed;
+	top: 60px;
+	width: 200px;
+}
