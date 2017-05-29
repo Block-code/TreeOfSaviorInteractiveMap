@@ -1,5 +1,9 @@
 body {
 	overflow: hidden;
+	cursor: url('/img/normal.png'), auto;
+}
+body.dragging {
+	cursor: url('/img/dragging.png'), auto;
 }
 
 .locations {

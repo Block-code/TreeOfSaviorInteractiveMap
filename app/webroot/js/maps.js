@@ -34,9 +34,8 @@ tosMap.controller('MapsController', [
 		$(document).ready(function(){
 			var wndow, scrolling = false;
 
-			$('body').css('cursor', 'url(\'' + normalCursorImagePath + '\'), auto'); // @todo move this to css
 			$(window).on('mousedown', function(event) {
-				$('body').css('cursor', 'url(\'' + draggingCursorImagePath + '\'), auto');
+				$('body').addClass('dragging');
 				wndow = {x:event.pageX, y: event.pageY};
 				scrolling = true;
 			});
@@ -49,7 +48,7 @@ tosMap.controller('MapsController', [
 			});
 
 			$(window).on('mouseup', function () {
-				$('body').css('cursor', 'url(\'' + normalCursorImagePath + '\'), auto');
+				$('body').removeClass('dragging');
 				scrolling = false;
 				wndow = {};
 			});
