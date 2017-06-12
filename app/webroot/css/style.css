@@ -10,7 +10,6 @@ body.dragging {
 	position: relative;
 	z-index: 2;
 }
-
 .location {
 	position: absolute;
 }
@@ -20,9 +19,45 @@ body.dragging {
 	-moz-user-select: none;
 }
 
-.search {
-	right: 50px;
+.popin {
+	background-color: white;
+	box-shadow: 0px 0px 3px #333;
 	position: fixed;
+	right: 50px;
 	top: 60px;
-	width: 200px;
+	width: 250px;
+	z-index: 3;
+}
+.popin .searchbar input {
+	border-radius: 0px;
+	border: 0px;
+	font-family: serif;
+	height: 40px;
+	padding-right: 38px;
+	padding-top: 7px;
+}
+.popin .searchbar .iconbar {
+	color: #DDD;
+	font-size: 21px;
+	position: absolute;
+	right: 8px;
+	top: 9px;
+}
+.popin .suggestions {
+	border-top: 1px solid #CCC;
+	font-family: serif;
+}
+.popin .suggestions ul {
+	margin-bottom: 0px;
+}
+.popin .suggestions li {
+	border-bottom: 1px solid #EEE;
+	padding: 7px 10px;
+}
+.popin .suggestions li:hover {
+	background-color: #EEE;
+}
+.popin .suggestions li .type {
+	color: #CACACA;
+	font-style: italic;
 }

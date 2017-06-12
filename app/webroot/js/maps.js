@@ -5,21 +5,36 @@ tosMap.controller('MapsController', [
 			$scope.locations = response;
 		});
 
+		$scope.query = {q: '', previous: ''};
+
 		// Search for location by name
 		$scope.search = function (q) {
-			var similars = [];
-			angular.forEach($scope.locations, function(location) {
-				if (location.Location.name.match(new RegExp(q, 'i'))) {
-					similars.push({
-						name:location.Location.name,
-						recommended_level: location.Location.recommended_level,
-						x: parseInt(location.Location.position.x, 10),
-						y: parseInt(location.Location.position.y, 10)
-					});
-				}
-			});
+			var suggestions = [];
 
-			return similars;
+			if (q !== $scope.query.previous) {
+				$scope.clear();
+				if (q.length > 2) {
+					angular.forEach($scope.locations, function(location) {
+						if (location.Location.name.match(new RegExp(q, 'i'))) {
+							suggestions.push({
+								name:location.Location.name,
+								type: location.Location.type,
+								x: parseInt(location.Location.position.x, 10),
+								y: parseInt(location.Location.position.y, 10)
+							});
+
+							$scope.previous = q;
+						}
+					});
+
+					$scope.suggestions = suggestions;
+				}
+			}
+		};
+
+		// Clear suggestions
+		$scope.clear = function () {
+			$scope.suggestions = [];
 		};
 
 		// Navigate (scroll the window) to the location
