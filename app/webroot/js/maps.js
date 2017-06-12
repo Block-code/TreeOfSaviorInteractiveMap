@@ -41,7 +41,7 @@ tosMap.controller('MapsController', [
 		$scope.navigate = function (location) {
 			window.scrollTo(
 				location.x - Math.floor(window.innerWidth / 2),
-				location.y- Math.floor(window.innerHeight / 2)
+				location.y - Math.floor(window.innerHeight / 2)
 			);
 		};
 
