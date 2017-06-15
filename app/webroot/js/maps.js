@@ -49,20 +49,20 @@ tosMap.controller('MapsController', [
 		$(document).ready(function(){
 			var wndow, scrolling = false;
 
-			$(window).on('mousedown', function(event) {
+			$('.draggable').on('mousedown', function(event) {
 				$('body').addClass('dragging');
 				wndow = {x:event.pageX, y: event.pageY};
 				scrolling = true;
 			});
 
-			$(window).on('mousemove', function(event) {
+			$('.draggable').on('mousemove', function(event) {
 				if (scrolling) {
 					window.scrollBy(wndow.x - event.pageX, wndow.y - event.pageY);
 					wndow = {x:event.pageX, y: event.pageY};
 				}
 			});
 
-			$(window).on('mouseup', function () {
+			$('.draggable').on('mouseup', function () {
 				$('body').removeClass('dragging');
 				scrolling = false;
 				wndow = {};

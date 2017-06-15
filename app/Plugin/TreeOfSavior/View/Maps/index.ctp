@@ -17,4 +17,5 @@
 		</div>
 		<div class="advanced-options"></div>
 	</div>
+	<div class="draggable"></div>
 </div>
