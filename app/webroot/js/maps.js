@@ -7,13 +7,17 @@ tosMap.controller('MapsController', [
 
 		$scope.query = {q: '', previous: ''};
 		$scope.query.navigated = false;
+		$scope.suggestions = [];
 
 		// Search for location by name
-		$scope.search = function (q) {
+		$scope.search = function (q, $event) {
 			var suggestions = [];
 
-			if (q !== $scope.query.previous) {
-				$scope.clear();
+			if ($event.originalEvent.keyCode === 13 && $scope.suggestions.length > 0) {
+				$($event.target).blur();
+				$scope.navigate($scope.suggestions[0]);
+			}
+			else if (q !== $scope.query.previous) {
 				if (q.length > 2) {
 					angular.forEach($scope.locations, function(location) {
 						if (location.Location.name.match(new RegExp(q, 'i'))) {
@@ -27,9 +31,8 @@ tosMap.controller('MapsController', [
 							$scope.previous = q;
 						}
 					});
-
-					$scope.suggestions = suggestions;
 				}
+				$scope.suggestions = suggestions;
 			}
 		};
 
