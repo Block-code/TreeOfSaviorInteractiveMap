@@ -2,7 +2,7 @@
 	<div class="locations">
 		<div class="map"><img src="img/map.jpg"></div>
 
-		<div class="location" ng-repeat="location in locations" ng-style="{top: location.Location.position.y, left: location.Location.position.x}">{{location.Location.name}}</div>
+		<div class="location" ng-repeat="location in locations" ng-style="{top: location.Location.position.y, left: location.Location.position.x}">{{location.Location.name}} <span ng-hide="location.Location.type == 'town'">[Lv {{location.Location.recommended_level}}]</span></div>
 	</div>
 
 	<div class="popin">
