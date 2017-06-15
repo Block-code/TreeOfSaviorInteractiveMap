@@ -6,6 +6,7 @@ tosMap.controller('MapsController', [
 		});
 
 		$scope.query = {q: '', previous: ''};
+		$scope.query.navigated = false;
 
 		// Search for location by name
 		$scope.search = function (q) {
@@ -43,6 +44,8 @@ tosMap.controller('MapsController', [
 				location.x - Math.floor(window.innerWidth / 2),
 				location.y - Math.floor(window.innerHeight / 2)
 			);
+
+			$scope.query.navigated = true;
 		};
 
 		// Create the drag and move behavior

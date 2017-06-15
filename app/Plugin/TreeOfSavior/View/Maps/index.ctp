@@ -7,10 +7,10 @@
 
 	<div class="popin">
 		<div class="searchbar">
-			<input type="text" placeholder="Esta procurando por algum lugar" class="form-control" ng-change="search(query.q)" ng-model="query.q">
+			<input type="text" placeholder="Esta procurando por algum lugar" class="form-control" ng-change="search(query.q)" ng-model="query.q" ng-focus="query.navigated = false">
 			<div class="glyphicon glyphicon-question-sign iconbar" ng-click="search(query.q)"></div>
 		</div>
-		<div class="suggestions" ng-if="suggestions.length > 0">
+		<div class="suggestions" ng-if="suggestions.length > 0" ng-hide="query.navigated">
 			<ul class="list-unstyled">
 				<li ng-click="navigate(location);clear();" ng-repeat="location in suggestions">{{location.name}} <span class="type">{{location.type}}</span></li>
 			</ul>
