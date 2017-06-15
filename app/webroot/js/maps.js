@@ -36,11 +36,6 @@ tosMap.controller('MapsController', [
 			}
 		};
 
-		// Clear suggestions
-		$scope.clear = function () {
-			$scope.suggestions = [];
-		};
-
 		// Navigate (scroll the window) to the location
 		$scope.navigate = function (location) {
 			window.scrollTo(

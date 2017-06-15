@@ -12,7 +12,7 @@
 		</div>
 		<div class="suggestions" ng-if="suggestions.length > 0" ng-hide="query.navigated">
 			<ul class="list-unstyled">
-				<li ng-click="navigate(location);clear();" ng-repeat="location in suggestions">{{location.name}} <span class="type">{{location.type}}</span></li>
+				<li ng-click="navigate(location);" ng-repeat="location in suggestions">{{location.name}} <span class="type">{{location.type}}</span></li>
 			</ul>
 		</div>
 		<div class="advanced-options"></div>
