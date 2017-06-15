@@ -18,7 +18,22 @@ body.dragging {
 	z-index: 2;
 }
 .location {
+	background: rgba(0,0,0,0.69);
+	border: 1px solid #623F23;
+	border-radius: 5px;
+	box-shadow: 0px 0px 3px #623F23;
+	color: white;
+	font-family: serif;
+	font-size: 12px;
+	letter-spacing: 0.3px;
+	min-width: 100px;
+	padding: 1px 7px 2px;
 	position: absolute;
+	text-shadow: 0px 0px 0px white;
+}
+.location span {
+	color: #00ffff;
+	text-shadow: 0px 0px 0px #00ffff;
 }
 
 .map img {
