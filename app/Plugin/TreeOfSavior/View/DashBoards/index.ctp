@@ -1,5 +1,5 @@
 <div ng-controller="DashboardsController">
-	<div class="map"ng-click="showModal($event)">
+	<div class="map">
 		<img data-target="#myModal" src="/img/map.jpg">
 	</div>
 
@@ -23,4 +23,6 @@
 			</div>
 		</div>
 	</div>
+
+	<div class="draggable" ng-dblclick="showModal($event)"></div>
 </div>
