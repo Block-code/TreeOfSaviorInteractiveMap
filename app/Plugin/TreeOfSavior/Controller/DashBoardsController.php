@@ -1,10 +1,8 @@
-<?php 
+<?php
 App::uses('TreeOfSaviorAppController', 'TreeOfSavior.Controller');
 
 
-class DashBoardsController extends TreeOfSaviorAppController{
+class DashboardsController extends TreeOfSaviorAppController {
 
-	public function index(){
-
-	}
+	public function index () {}
 }

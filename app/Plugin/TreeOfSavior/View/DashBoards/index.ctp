@@ -1,4 +1,4 @@
-<div ng-controller="DashController">
+<div ng-controller="DashboardsController">
 
 	 <div class="map"><img data-target="#myModal" src="img/map.jpg" ng-click="showModal($event)"></div>
 

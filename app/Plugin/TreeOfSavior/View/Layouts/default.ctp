@@ -16,8 +16,8 @@
 	<?php echo $this->fetch('content'); ?>
 
 	<script type="text/javascript" src="js/script.js"></script>
-	<script type="text/javascript" src="js/dash.js"></script>
 	<script type="text/javascript" src="js/maps.js"></script>
 
+	<script type="text/javascript" src="/js/dashboards.js"></script>
 </body>
 </html>
