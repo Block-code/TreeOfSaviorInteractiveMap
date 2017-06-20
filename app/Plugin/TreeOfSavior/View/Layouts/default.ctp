@@ -18,5 +18,31 @@
 	<script type="text/javascript" src="/js/script.js"></script>
 	<script type="text/javascript" src="/js/dashboards.js"></script>
 	<script type="text/javascript" src="/js/maps.js"></script>
+
+	<script type="text/javascript">
+		// Create the drag and move behavior
+		$(document).ready(function(){
+			var wndow, scrolling = false;
+
+			$('.draggable').on('mousedown', function(event) {
+				$('body').addClass('dragging');
+				wndow = {x:event.pageX, y: event.pageY};
+				scrolling = true;
+			});
+
+			$('.draggable').on('mousemove', function(event) {
+				if (scrolling) {
+					window.scrollBy(wndow.x - event.pageX, wndow.y - event.pageY);
+					wndow = {x:event.pageX, y: event.pageY};
+				}
+			});
+
+			$('.draggable').on('mouseup', function () {
+				$('body').removeClass('dragging');
+				scrolling = false;
+				wndow = {};
+			});
+		});
+	</script>
 </body>
 </html>
