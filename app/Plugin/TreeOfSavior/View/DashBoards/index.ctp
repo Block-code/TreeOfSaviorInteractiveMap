@@ -1,6 +1,8 @@
 <div ng-controller="DashboardsController">
+	<div class="map"ng-click="showModal($event)">
+		<img data-target="#myModal" src="/img/map.jpg">
+	</div>
 
-	 <div class="map"><img data-target="#myModal" src="img/map.jpg" ng-click="showModal($event)"></div>
 
 <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
